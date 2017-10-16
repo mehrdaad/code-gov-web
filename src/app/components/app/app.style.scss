@@ -1,13 +1,5 @@
 @import '../../../styles/base/all';
 
-.app-container {
-  margin-top: 67px;
-
-  @media screen and (min-width: $small-screen) {
-    margin-top: 0;
-  }
-}
-
 .block--dark {
   .app-logo {
     .cls-1 {
@@ -20,32 +12,35 @@
 
   li {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-right: 2rem;
   }
 
-  .gsa,
-  .pif {
-    max-width: 2.75em;
+  img,
+  svg {
+    max-height: 6rem;
+    vertical-align: middle;
   }
 
-  .whitehouse {
-    max-width: 4em;
+  svg {
+    height: 2.5rem;
+
+    .cls-1 {
+      fill: $color-white;
+    }
   }
 }
 
 .app-links {
   display: block;
-  float: right;
+  float: left;
 
   .app-link {
     display: inline-block;
     font-size: 1em;
-    margin-left: 1em;
+    font-weight: bold;
+    margin-left: 4rem;
+    text-transform: uppercase;
     vertical-align: top;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
   }
 }
 
@@ -60,7 +55,7 @@
 
 .app-logo {
   margin: 0 auto;
-  width: 6em;
+  width: 13rem;
 
   @media screen and (min-width: $small-screen) {
     float: left;
@@ -79,13 +74,14 @@
   svg {
     height: 100%;
     left: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     position: absolute;
     top: 0;
-    width: 100%;
   }
 
   .svg-container {
-    height: 40px;
+    height: 30px;
     position: relative;
     width: 100%;
   }

@@ -11,11 +11,7 @@ body {
     margin: 0 auto;
     text-align: center;
 
-    @media screen and (min-width: $small-screen) {
-      max-width: 43em;
-    }
-
-    h1 {
+    h2 {
       font-size: 1.75em;
       margin: 0 auto;
       max-width: 17em;
@@ -25,17 +21,24 @@ body {
       }
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 4rem;
+        font-size: 3em;
       }
     }
 
     p {
       font-size: 1em;
+      margin-top: 1rem;
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 1.2em;
+        font-size: 1.9em;
       }
     }
+  }
+
+  hr {
+    border-top: 6px solid $brand-teal;
+    margin-top: 6rem;
+    width: 30rem;
   }
 }
 
@@ -53,8 +56,9 @@ body {
   }
 
   li {
-    margin-bottom: 2em;
-    padding-left: 3em;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     position: relative;
 
     i {
@@ -68,17 +72,44 @@ body {
 
 }
 
+.about-action {
+  text-align: center;
+
+  > a > img {
+    padding: 1rem;
+    transition: 0.2s transform;
+  }
+
+  > a:focus,
+  > a:hover {
+    text-decoration: none;
+
+    > img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes zoomOutOnBackground {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
 .banner {
-  padding: 2em 0 9em;
+  height: 90vh;
   position: relative;
 
   @media screen and (min-width: $small-screen) {
-    padding: 4em 0 8em;
+    padding: 16rem 0 16rem;
   }
 
   h1 {
     font-size: 2em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0;
 
     @media screen and (min-width: $small-screen) {
       font-size: 2.8em;
@@ -92,7 +123,8 @@ body {
   p {
     color: $color-gray-lighter;
     font-size: 1em;
-    margin-top: 0;
+    margin: 2rem auto 3rem;
+    max-width: 40rem;
 
     @media screen and (min-width: $small-screen) {
       font-size: 1.2em;
@@ -116,18 +148,56 @@ body {
   }
 }
 
+.banner-background-container {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.banner-background {
+  animation: 10s linear zoomOutOnBackground;
+  background-image: url('/assets/img/american_flag_1920x1280_gradient.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .banner-container {
   margin: 0 auto;
-  max-width: 37em;
+  max-width: 55em;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.featured-projects {
   text-align: center;
 }
 
+.featured-project {
+  > img {
+    padding: 1rem;
+    height: 170px;
+  }
+
+  > p {
+    margin-bottom: 2rem;
+  }
+}
+
 .press {
-  .press__header {
-    font-size: 1em;
-    margin-bottom: 2em;
+  h2 {
+    margin-bottom: 2rem;
     text-align: center;
-    text-transform: uppercase;
   }
 }
 
@@ -175,12 +245,24 @@ body {
     }
 
     &::before {
-      color: $brand-teal-dark;
+      color: $brand-teal;
       content: "“";
       font-size: 1.75em;
       left: 0em;
       position: absolute;
       top: -0.275em;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 2.5em;
+      }
+    }
+
+    &::after {
+      color: $brand-teal;
+      content: "”";
+      font-size: 1.75em;
+      right: 0;
+      position: absolute;
 
       @media screen and (min-width: $medium-screen) {
         font-size: 2.5em;
@@ -213,5 +295,37 @@ body {
 
   &:hover {
     transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce {
+	0%, 6%, 15%, 20%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+	12% {
+    transform: translateX(-50%) translateY(-30px);
+  }
+
+	18% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+}
+
+.scroll-indicator {
+  animation: 6s linear bounce infinite;
+  bottom: 0;
+  color: $color-white;
+  font-size: 8em;
+  height: 7rem;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateX(-50%);
+
+  > i {
+    position: relative;
+    top: -30px;
+    vertical-align: top;
   }
 }

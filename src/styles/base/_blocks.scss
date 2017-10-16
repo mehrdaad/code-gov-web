@@ -3,7 +3,7 @@
 }
 
 .block--dark {
-  background-color: $brand-primary;
+  background-color: $brand-blue-gray-dark;
 }
 
 .block--light {
@@ -12,4 +12,8 @@
 
 .block--white {
   background-color: $color-white;
+}
+
+.block--transparent {
+  background-color: transparent;
 }

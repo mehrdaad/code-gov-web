@@ -1,61 +1,82 @@
 <section class="block block--dark banner">
-  <div class="usa-grid">
-    <div class="banner-container">
-      <div class="banner-content">
-        <h1>Sharing America's Code</h1>
-        <p>
-          Unlock the tremendous potential of the Federal Government’s software.
-        </p>
-        <repos-search autofocus=true></repos-search>
-      </div>
-    </div>
-    <banner-art></banner-art>
+  <div class="banner-background-container">
+    <div class="banner-background"></div>
   </div>
+  <div class="banner-container usa-grid">
+    <div class="banner-content">
+      <h1>Sharing America's Code</h1>
+      <p>
+        Unlock the tremendous potential of the Federal Government’s software.
+      </p>
+      <repos-search autofocus=true></repos-search>
+    </div>
+  </div>
+  <a class="scroll-indicator" pageScroll [pageScrollDuration]="250" [pageScrollOffset]="70" pageScrollTarget=".about" href="#"><i class="fa fa-angle-down"></i></a>
 </section>
-<section class="about l-block--large">
+<section id="about" class="about l-block--large">
   <div class="usa-grid">
     <header>
-      <h2>Help propel America’s next breakthrough in innovation.</h2>
+      <h2>Our Mission</h2>
       <p>
-        Code.gov is a platform designed to improve access to the federal
-        government’s custom-developed software.
+        Code.gov engages the government and general public in a community to
+        improve the quality, effectiveness, and efficiency of government software,
+        save money, and reduce waste by sharing and reusing government source code.
       </p>
     </header>
+    <hr />
     <ul class="usa-unstyled-list usa-grid about-actions">
-      <li class="card usa-width-one-half">
-        <div class="card__icon">
-          <i class="icon fa fa-code"></i>
-        </div>
-        <div class="card__body">
-          <h2>Explore Code</h2>
-          <p>
-             Choose from thousands of projects you can improve and reuse.
-          </p>
-          <a routerLink="explore-code" class="usa-button button--secondary">
-            Browse Code
-          </a>
-        </div>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/docs/overview/introduction">
+          <img alt="" aria-hidden="true" src="/assets/img/icons/info_bl.png" />
+          <h3>About</h3>
+          <p>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </a>
       </li>
-      <li class="card usa-width-one-half">
-        <div class="card__icon">
-          <i class="icon fa fa-book"></i>
-        </div>
-        <div class="card__body">
-          <h2>Implement Policy</h2>
-          <p>
-             Discover tools and resources designed to help federal
-             agencies implement the Federal Source Code Policy.
-          </p>
-          <a routerLink="policy-guide" class="usa-button button--secondary">
-            Get Started
-          </a>
-        </div>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/policy/introduction">
+          <img alt="" aria-hidden="true" src="/assets/img/icons/policy_bl.png" />
+          <h3>Policy Info</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        </a>
+      </li>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/docs/compliance/dashboard">
+          <img alt="" aria-hidden="true" src="/assets/img/icons/check_bl.png" />
+          <h3>Dashboard</h3>
+          <p>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </a>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="press l-block--large">
+<section class="featured-projects block l-block--large">
+  <div class="usa-grid">
+    <h2>Featured Projects</h2>
+    <ul class="usa-unstyled-list usa-grid">
+      <li class="featured-project usa-width-one-third">
+        <img src="/assets/img/agencies/DOD.svg" />
+        <h3>Dept. of Defense</h3>
+        <p>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <button class="button--tertiary">View Project</button>
+      </li>
+      <li class="featured-project usa-width-one-third">
+        <img src="/assets/img/agencies/NASA.png" />
+        <h3>NASA</h3>
+        <p>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <button class="button--tertiary">View Project</button>
+      </li>
+      <li class="featured-project usa-width-one-third">
+        <img src="/assets/img/agencies/TRE.gif" />
+        <h3>Dept. of the Treasury</h3>
+        <p>Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <button class="button--tertiary">View Project</button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="press l-block--extra-large">
   <div class="usa-grid">
     <h2 class="press__header">Press</h2>
     <div class="press-container">

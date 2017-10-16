@@ -1,0 +1,19 @@
+@import '../../../../styles/base/all';
+
+.social-links {
+  display: none;
+  float: right;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+}
+
+.social-link {
+  font-size: 2em;
+  line-height: 40px;
+
+  > a {
+    color: $color-white;
+  }
+}
