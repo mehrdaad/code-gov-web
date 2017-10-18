@@ -3,7 +3,6 @@
 .browse {
   @include grid-column(12);
   margin-top: 0.7rem;
-  text-align: left;
 
   @media screen and (min-width: $small-screen) {
     display: none;
