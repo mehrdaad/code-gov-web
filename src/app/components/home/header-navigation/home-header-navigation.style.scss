@@ -18,7 +18,12 @@
   }
 
   .follow-us {
+    display: none;
     font-size: 0.4em;
     vertical-align: top;
+
+    @media screen and (min-width: $medium-screen) {
+      display: inline-block;
+    }
   }
 }

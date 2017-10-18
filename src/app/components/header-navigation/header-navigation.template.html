@@ -47,6 +47,9 @@
         <a class="link link--contrast" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
       </li>
     </ul>
+    <a class="toggle-search-box-button" (click)="showSearchBox()">
+      <i class="fa fa-search"></i>
+    </a>
     <form
         class="search-form"
         (ngSubmit)="handleFormSubmission()">
@@ -60,3 +63,21 @@
     </form>
   </div>
 </nav>
+<div class="search-box" [ngClass]="{'active': isSearchBoxShown}">
+  <div class="usa-grid">
+    <a class="close-search-box-button" (click)="hideSearchBox()">
+      <i class="fa fa-close"></i>
+    </a>
+    <form
+        class="search-form"
+        (ngSubmit)="handleFormSubmission()">
+      <search-input
+          name="searchQuery"
+          placeholder="Search Projects..."
+          withIcon="true"
+          [(queryValue)]="searchQuery"
+          ngDefaultControl>
+      </search-input>
+    </form>
+  </div>
+</div>

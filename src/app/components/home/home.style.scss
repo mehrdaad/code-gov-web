@@ -244,7 +244,8 @@ body {
     padding-top: 1rem;
   }
 
-  button {
+  button,
+  .usa-button {
     margin-left: 10px;
 
     &:first-of-type {
@@ -277,6 +278,7 @@ body {
   }
 
   button,
+  .usa-button,
   h3,
   h4,
   p {
@@ -311,13 +313,15 @@ body {
   }
 
   button,
+  .usa-button,
   h3,
   h4,
   p {
     color: $color-gray-dark;
   }
 
-  button {
+  button,
+  .usa-button {
     border-color: $color-gray-dark;
 
     &:focus,
@@ -357,6 +361,7 @@ body {
   }
 
   button,
+  .usa-button,
   h3,
   h4,
   p {
@@ -391,7 +396,8 @@ body {
     }
   }
 
-  button {
+  button,
+  .usa-button {
     font-size: 0.8em;
     margin-left: 10px;
     width: 44%;

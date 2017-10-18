@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+
+import { MobileService } from '../../services/mobile';
 
 @Component({
   selector: 'header-navigation',
@@ -13,8 +16,19 @@ import { Router } from '@angular/router';
 export class HeaderNavigationComponent {
   searchQuery: string = '';
   isAtTop: boolean = true;
+  isSearchBoxShown: boolean = false;
+  searchBoxActiveSubscription: Subscription;
 
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+    private mobileService: MobileService,
+  ) {
+    this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
+  }
+
+  ngOnDestroy() {
+    this.searchBoxActiveSubscription.unsubscribe();
+  }
 
   /**
    * Whenever the form is submitted, perform a search and then reset the search
@@ -55,5 +69,17 @@ export class HeaderNavigationComponent {
    */
   onScrollHandler($event) {
     this.isAtTop = $event.target.scrollingElement.scrollTop === 0;
+  }
+
+  showSearchBox() {
+    this.mobileService.showSearchBox();
+  }
+
+  hideSearchBox() {
+    this.mobileService.hideSearchBox();
+  }
+
+  toggleSearchBox() {
+    this.mobileService.toggleSearchBox();
   }
 }
