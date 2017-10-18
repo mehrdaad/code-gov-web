@@ -50,4 +50,12 @@ $button-tertiary-color-hover: $brand-teal;
     background-color: $brand-teal;
     border: 2px solid $brand-teal;
   }
+
+  .block--teal & {
+    &:focus,
+    &:hover {
+      background-color: $brand-blue-gray-dark;
+      border: 2px solid $brand-blue-gray-dark;
+    }
+  }
 }

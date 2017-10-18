@@ -13,7 +13,12 @@
   font-size: 2em;
   line-height: 40px;
 
-  > a {
+  a {
     color: $color-white;
+  }
+
+  .follow-us {
+    font-size: 0.4em;
+    vertical-align: top;
   }
 }

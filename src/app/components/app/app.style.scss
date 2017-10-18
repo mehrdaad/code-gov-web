@@ -1,15 +1,20 @@
 @import '../../../styles/base/all';
 
 .block--dark {
-  .app-logo {
-    .cls-1 {
-      fill: $color-white;
-    }
+  .cls-1 {
+    fill: $color-white;
+  }
+}
+
+.app-footer {
+  text-align: center;
+
+  @media screen and (min-width: $small-screen) {
+    text-align: left;
   }
 }
 
 .agency-logos {
-
   li {
     display: inline-block;
     margin-right: 2rem;
@@ -17,8 +22,12 @@
 
   img,
   svg {
-    max-height: 6rem;
+    max-height: 3rem;
     vertical-align: middle;
+
+    @media screen and (min-width: $small-screen) {
+      max-height: 6rem;
+    }
   }
 
   svg {
@@ -36,11 +45,21 @@
 
   .app-link {
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: bold;
-    margin-left: 4rem;
+    margin-left: 2rem;
     text-transform: uppercase;
     vertical-align: top;
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 0.8em;
+      margin-left: 3rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      font-size: 1em;
+      margin-left: 4rem;
+    }
   }
 }
 
@@ -70,34 +89,54 @@
       outline: 0;
     }
   }
-
-  svg {
-    height: 100%;
-    left: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    position: absolute;
-    top: 0;
-  }
-
-  .svg-container {
-    height: 30px;
-    position: relative;
-    width: 100%;
-  }
 }
 
 .app-navigation {
   font-size: 0.8em;
   padding: 1.5rem 0;
+  text-align: center;
 
   @media screen and (min-width: $small-screen) {
     font-size: 1em;
+    text-align: left;
   }
 
   .search-form {
     .autocomplete-container {
       right: 0;
+    }
+  }
+}
+
+.svg-container {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+
+  @media screen and (min-width: $small-screen) {
+    float: left;
+    left: 0;
+    position: relative;
+    transform: none;
+  }
+
+  svg {
+    height: 20px;
+    left: 0;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    top: 0;
+
+    @media screen and (min-width: $medium-screen) {
+      height: 25px;
+      margin-bottom: 7.5px;
+      margin-top: 7.5px;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      height: 30px;
+      margin-bottom: 5px;
+      margin-top: 5px;
     }
   }
 }

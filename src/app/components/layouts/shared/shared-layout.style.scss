@@ -1,0 +1,7 @@
+@import "../../../../styles/base/all";
+
+.shared-layout {
+  @media screen and (min-width: $small-screen) {
+    padding-top: 75px;
+  }
+}

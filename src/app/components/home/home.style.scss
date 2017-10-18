@@ -5,8 +5,6 @@ body {
 }
 
 .about {
-  border-bottom: 1px solid $color-gray-lightest;
-
   header {
     margin: 0 auto;
     text-align: center;
@@ -14,7 +12,9 @@ body {
     h2 {
       font-size: 1.75em;
       margin: 0 auto;
+      margin-top: 4rem;
       max-width: 17em;
+      text-transform: uppercase;
 
       @media screen and (min-width: $small-screen) {
         font-size: 2em;
@@ -30,21 +30,29 @@ body {
       margin-top: 1rem;
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 1.9em;
+        font-size: 1.5em;
       }
     }
   }
 
   hr {
     border-top: 6px solid $brand-teal;
-    margin-top: 6rem;
+    margin-top: 3rem;
     width: 30rem;
+
+    @media screen and (min-width: $small-screen) {
+      margin-top: 6rem;
+    }
   }
 }
 
 .about-actions {
   margin-top: 2em;
   padding: 0;
+
+  @media screen and (min-width: $small-screen) {
+    font-size: 1.1em;
+  }
 
   @media screen and (min-width: $medium-screen) {
     margin-top: 4em;
@@ -53,6 +61,10 @@ body {
   h2 {
     font-size: 1.3em;
     margin-top: 0;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 2.5em;
+    }
   }
 
   li {
@@ -68,6 +80,10 @@ body {
 
   p {
     font-size: 0.95em;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 1.1em;
+    }
   }
 
 }
@@ -159,6 +175,7 @@ body {
 
 .banner-background {
   animation: 10s linear zoomOutOnBackground;
+  background-attachment: fixed;
   background-image: url('/assets/img/american_flag_1920x1280_gradient.png');
   background-position: top center;
   background-repeat: no-repeat;
@@ -181,21 +198,208 @@ body {
 
 .featured-projects {
   text-align: center;
+
+  h2 {
+    font-size: 1.75em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 2em;
+    }
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 3em;
+    }
+  }
 }
 
 .featured-project {
-  > img {
-    padding: 1rem;
-    height: 170px;
+  text-align: left;
+
+  &:nth-of-type(odd) {
+    .usa-width-one-half {
+      float: right;
+    }
   }
 
-  > p {
-    margin-bottom: 2rem;
+  &:nth-of-type(even) {
+    .usa-width-one-half {
+      float: left;
+    }
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.8em;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  p {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  button {
+    margin-left: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.accessible-name-and-description-inspector {
+  background: linear-gradient(215deg, #283036, #4a5963);
+  color: $color-white;
+
+  @media screen and (min-width: $medium-screen) {
+    background: url('/assets/img/featured-projects/typing.png'), linear-gradient(215deg, #283036, #4a5963);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 34rem, 100%;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    background-position: 0% 100%;
+    background-size: 45rem, 100%;
+  }
+
+  @media screen and (min-width: $extra-large-screen) {
+    background-position: 8% 100%;
+    background-size: 45rem, 100%;
+  }
+
+  button,
+  h3,
+  h4,
+  p {
+    color: $color-white;
+  }
+}
+
+.osha-heat-safety {
+  background: linear-gradient(215deg, #cc9966 0%, #fdcf84 100%);
+
+  @media screen and (min-width: $medium-screen) {
+    background: url('/assets/img/featured-projects/construction_worker.png'), radial-gradient(circle at 75% 50%, #fff 0%, #fdcf84 67%, #ac7f47 100%);
+    background-position: 103% 100%;
+    background-repeat: no-repeat;
+    background-size: 34rem, 100%;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    background-position: 99% 100%;
+    background-size: 45rem, 100%;
+  }
+
+  @media screen and (min-width: $extra-large-screen) {
+    background-position: 90% 100%;
+    background-size: 45rem, 100%;
+  }
+
+  button,
+  h3,
+  h4,
+  p {
+    color: $color-gray-dark;
+  }
+
+  button {
+    border-color: $color-gray-dark;
+
+    &:focus,
+    &:hover {
+      border-color: $brand-teal;
+      color: $color-white;
+    }
+  }
+}
+
+.owning-a-home {
+  background: linear-gradient(215deg, #283036, #4a5963);
+  color: $color-white;
+
+  @media screen and (min-width: $medium-screen) {
+    background: url('/assets/img/featured-projects/house_for_sale.png'), url('/assets/img/featured-projects/grass.png');
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 34rem, cover;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    background-position: 0% 100%;
+    background-size: 45rem, cover;
+  }
+
+  @media screen and (min-width: $extra-large-screen) {
+    background-position: 8% 100%;
+    background-size: 55rem, cover;
+  }
+
+  button,
+  h3,
+  h4,
+  p {
+    color: $color-white;
+  }
+}
+
+.featured-project-info {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+  @media screen and (min-width: $small-screen) {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+  }
+
+  .buttons {
+    text-align: center;
+
+    @media screen and (min-width: $small-screen) {
+      text-align: left;
+    }
+  }
+
+  button {
+    font-size: 0.8em;
+    margin-left: 10px;
+    width: 44%;
+
+    @media screen and (min-width: $large-screen) {
+      font-size: 1em;
+    }
+    
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
 
 .press {
+  background-attachment: fixed;
+  background-image: url('/assets/img/american_flag_1920x1280_gradient.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   h2 {
+    color: $color-white;
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -227,9 +431,10 @@ body {
 
 .quote-large {
   blockquote {
+    line-height: 1.25;
     background-color: transparent;
     border-left: none;
-    color: $brand-blue-gray;
+    color: $color-white;
     font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.75em;
     font-weight: 500;
@@ -257,15 +462,15 @@ body {
       }
     }
 
-    &::after {
+    .end-quote {
       color: $brand-teal;
-      content: "”";
       font-size: 1.75em;
-      right: 0;
-      position: absolute;
+      line-height: 1;
+      vertical-align: text-top;
 
       @media screen and (min-width: $medium-screen) {
         font-size: 2.5em;
+        line-height: 0.8em;
       }
     }
   }
@@ -316,16 +521,26 @@ body {
   animation: 6s linear bounce infinite;
   bottom: 0;
   color: $color-white;
-  font-size: 8em;
-  height: 7rem;
+  font-size: 3em;
+  height: 4rem;
   left: 50%;
   overflow: hidden;
   position: absolute;
   transform: translateX(-50%);
 
-  > i {
-    position: relative;
-    top: -30px;
-    vertical-align: top;
+  @media screen and (min-width: $small-screen) {
+    font-size: 6em;
+    height: 6rem;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: 8em;
+    height: 7rem;
+  }
+
+  i {
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
   }
 }
