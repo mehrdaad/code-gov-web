@@ -198,12 +198,13 @@ body {
 }
 
 .banner-container {
+  left: 50%;
   margin: 0 auto;
   max-width: 55em;
-  position: relative;
+  position: absolute;
   text-align: center;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .featured-projects {
