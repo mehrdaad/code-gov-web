@@ -588,7 +588,6 @@ body {
   left: 50%;
   overflow: hidden;
   position: absolute;
-  transform: translateX(-50%);
 
   @media screen and (min-width: $small-screen) {
     font-size: 6em;
