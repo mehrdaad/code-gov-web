@@ -12,6 +12,9 @@ const ghpages = require('gh-pages');
 const webpackConfig = ghDeploy.getWebpackConfigModule();
 const commonConfig = require('./webpack.common.js');
 
+const postcssCssnext = require('postcss-cssnext');
+const postcssImport = require('postcss-import');
+
 /**
  * Webpack Constants
  */
@@ -96,6 +99,13 @@ module.exports = function (env) {
 
       new LoaderOptionsPlugin({
         options: {
+          postcss: [
+            postcssImport({ addDependencyTo: webpack }),
+            postcssCssnext({
+              browsers: ['last 2 versions', 'ie >= 9'],
+              compress: true,
+            }),
+          ],
           sassLoader: {
             includePaths: [
               require('bourbon').includePaths,
