@@ -176,7 +176,7 @@ body {
 .banner-background {
   animation: 10s linear zoomOutOnBackground;
   background-attachment: fixed;
-  background-image: url('/assets/img/american_flag_1920x1280_gradient.png');
+  background-image: url('assets/img/american_flag_1920x1280_gradient.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -255,12 +255,13 @@ body {
 }
 
 .accessible-name-and-description-inspector {
+  background: #283036;
   background: linear-gradient(215deg, #283036, #4a5963);
   color: $color-white;
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('/assets/img/featured-projects/typing.png');
+      background: url('assets/img/featured-projects/typing.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -287,6 +288,7 @@ body {
 }
 
 .osha-heat-safety {
+  background: #fdcf84;
   background: linear-gradient(215deg, #cc9966 0%, #fdcf84 100%);
 
   @media screen and (min-width: $medium-screen) {
@@ -295,7 +297,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('/assets/img/featured-projects/construction_worker.png');
+      background: url('assets/img/featured-projects/construction_worker.png');
       background-position: 103% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -333,11 +335,13 @@ body {
 }
 
 .owning-a-home {
+  background: #3f7fab;
   background: linear-gradient(215deg, #3f7fab, #6db5f1);
   color: $color-white;
 
   @media screen and (min-width: $medium-screen) {
-    background: url('/assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
+    background: url('assets/img/featured-projects/grass.png'), #3f7fab;
+    background: url('assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: cover, contain;
@@ -345,7 +349,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('/assets/img/featured-projects/house_for_sale.png');
+      background: url('assets/img/featured-projects/house_for_sale.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -414,7 +418,7 @@ body {
 
 .press {
   background-attachment: fixed;
-  background-image: url('/assets/img/american_flag_1920x1280_gradient.png');
+  background-image: url('assets/img/american_flag_1920x1280_gradient.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -470,9 +474,8 @@ body {
       font-size: 2.5em;
     }
 
-    &::before {
+    .begin-quote {
       color: $brand-teal;
-      content: "“";
       font-size: 1.75em;
       left: 0em;
       position: absolute;
@@ -486,12 +489,12 @@ body {
     .end-quote {
       color: $brand-teal;
       font-size: 1.75em;
-      line-height: 0.6;
-      vertical-align: text-bottom;
+      line-height: 0.8;
+      position: absolute;
+      vertical-align: text-top;
 
       @media screen and (min-width: $medium-screen) {
         font-size: 2.5em;
-        line-height: 0.25;
       }
     }
   }
@@ -507,6 +510,7 @@ body {
     }
 
     .press-logo {
+      max-height: 1em;
       max-width: 5em;
     }
   }

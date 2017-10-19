@@ -29,20 +29,20 @@ if (helpers.hasProcessFlag('github-stag')) {
   GIT_BRANCH_NAME = 'gh-pages';
 } else if (helpers.hasProcessFlag('federalist-stag')){
   GIT_BRANCH_NAME = 'federalist-stag';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
   
 } else if (helpers.hasProcessFlag('federalist-dev')){
   
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
   
   
 }
 else if (helpers.hasProcessFlag('dashboard-preview')){
   GIT_BRANCH_NAME = 'federalist-dashboard-preview';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }
@@ -56,7 +56,7 @@ else if (helpers.hasProcessFlag('federalist-prod')){
 
 else {
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
+  BASEURL = '/preview/gsa/code-gov-web/federalist-dev/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }

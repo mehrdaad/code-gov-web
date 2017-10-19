@@ -87,12 +87,13 @@ $menu-width: 320px;
   right: 0;
   top: 0;
   transition: 0.5s opacity;
-  z-index: 1;
+  z-index: -1;
 
   &.active {
     background-color: $color-gray-dark;
     opacity: 0.7;
     pointer-events: all;
+    z-index: 1;
   }
 }
 

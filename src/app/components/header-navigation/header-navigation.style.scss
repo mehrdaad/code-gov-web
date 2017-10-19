@@ -23,16 +23,21 @@
     padding: 1.5rem 2rem;
   }
 
-  &.block--white.not-at-top {
+  &.block--white.at-top {
+    box-shadow: none;
+  }
+
+  &.block--white {
     background-color: $color-white;
     box-shadow: 0 0 10px 0 $color-black;
   }
 
-  &.block--dark {
+  &.block--dark.at-top {
     background-color: transparent;
+    box-shadow: none;
   }
 
-  &.block--dark.not-at-top {
+  &.block--dark {
     background-color: $brand-blue-gray-dark;
     box-shadow: 0 0 10px 0 $color-black;
   }
