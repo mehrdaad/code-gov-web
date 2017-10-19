@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const ghpages = require('gh-pages');
+const webpack = require('webpack');
 const webpackConfig = ghDeploy.getWebpackConfigModule();
 const commonConfig = require('./webpack.common.js');
 

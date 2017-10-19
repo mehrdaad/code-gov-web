@@ -27,7 +27,7 @@ body {
 
     p {
       font-size: 1em;
-      margin-top: 1rem;
+      margin-top: 2rem;
 
       @media screen and (min-width: $medium-screen) {
         font-size: 1.5em;
@@ -117,6 +117,7 @@ body {
 
 .banner {
   height: 90vh;
+  min-height: 48rem;
   position: relative;
 
   @media screen and (min-width: $small-screen) {
@@ -166,25 +167,34 @@ body {
 
 .banner-background-container {
   bottom: 0;
+  height: 100%;
   left: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
 }
 
 .banner-background {
   animation: 10s linear zoomOutOnBackground;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-image: url('assets/img/american_flag_1920x1280_gradient.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   bottom: 0;
+  height: 100%;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
+
+  // HACK: This is a hack to prevent ugliness on iOS
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+  }
 }
 
 .banner-container {
@@ -200,8 +210,12 @@ body {
   text-align: center;
 
   h2 {
+    color: $color-white;
     font-size: 1.75em;
     margin-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
     text-transform: uppercase;
 
     @media screen and (min-width: $small-screen) {
@@ -284,6 +298,22 @@ body {
   h4,
   p {
     color: $color-white;
+  }
+
+  .featured-project-info {
+    padding-top: 0;
+
+    @media screen and (min-width: $small-screen) {
+      padding-top: 0;
+    }
+
+    @media screen and (min-width: $medium-screen) {
+      padding-top: 1rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      padding-top: 2rem;
+    }
   }
 }
 
@@ -417,11 +447,16 @@ body {
 }
 
 .press {
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-image: url('assets/img/american_flag_1920x1280_gradient.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  // HACK: This is a hack to prevent ugliness on iOS
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+  }
 
   h2 {
     color: $color-white;

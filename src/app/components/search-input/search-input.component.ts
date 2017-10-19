@@ -39,7 +39,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() placeholder: string = "Search Thousands of Projects";
+  @Input() placeholder: string = "Search Thousands of Projects...";
   @Input() withIcon: boolean = false;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;

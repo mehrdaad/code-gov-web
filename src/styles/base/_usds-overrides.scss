@@ -14,3 +14,7 @@
     transition: all 0.2s ease;
   }
 }
+
+a:focus {
+  box-shadow: none;
+}
